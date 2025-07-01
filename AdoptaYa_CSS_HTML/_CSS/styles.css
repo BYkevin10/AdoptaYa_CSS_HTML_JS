@@ -1,0 +1,249 @@
+/* === VARIABLES RAÍZ (si quieres usarlas luego con CSS moderno) === */
+:root {
+    --color-principal: #4CAF50;
+    /* Verde suave */
+    --color-secundario: #A1887F;
+    /* Marrón claro */
+    --color-fondo: #F9FBE7;
+    /* Amarillo crema */
+    --color-texto: #333;
+    --borde-suave: 8px;
+    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.3s ease-in-out;
+    --espaciado: 1rem;
+}
+
+/* === RESET BÁSICO === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: var(--espaciado);
+}
+
+
+/* === ENCABEZADO === */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-principal);
+    color: white;
+    border-radius: var(--borde-suave);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* === GALERÍA === */
+.mascotas-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* === FICHA DE MASCOTA === */
+.ficha-mascota {
+    background: white;
+    border-radius: var(--borde-suave);
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+    transition: var(--transicion);
+}
+
+.ficha-mascota:hover {
+    transform: translateY(-4px);
+}
+
+/* === IMAGEN === */
+.imagen-mascota {
+    width: 100%;
+    aspect-ratio: 4 / 3;  /* o 3/2 según la proporción de tus fotos */
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.imagen-mascota img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* centra la imagen */
+    transition: transform 0.3s ease;
+}
+
+.imagen-mascota:hover img {
+    transform: scale(1.05); /* zoom sutil al pasar mouse */
+}
+
+
+
+/* === INFO === */
+.info-mascota {
+    padding: 1rem;
+}
+
+.info-mascota h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-principal);
+}
+
+.info-mascota p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* === ESTADO DE LA MASCOTA === */
+.estado-mascota {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: var(--color-acento, #4caf50);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-mascota {
+    position: relative;
+    /* para que el span se posicione correctamente */
+    background-color: var(--color-fondo-card, #fff);
+    border: 1px solid var(--color-borde, #ccc);
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Colores según estado */
+.disponible .estado-mascota {
+    background-color: #4caf50;
+}
+
+.adoptado .estado-mascota {
+    background-color: #f44336;
+}
+
+.en-proceso .estado-mascota {
+    background-color: #ff9800;
+}
+
+/* === FILTRO MASCOTA === */
+.filtros {
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filtro-btn {
+    padding: 0.5rem 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filtro-btn:hover {
+    background-color: #d4d4d4;
+}
+
+.filtro-btn.activo {
+    background-color: #1976d2;
+    color: white;
+}
+
+
+
+/* === BOTÓN === */
+.info-mascota button {
+    background: var(--color-secundario);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--borde-suave);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.info-mascota button:hover {
+    background: #8d6e63;
+}
+
+/* === RESPONSIVE GALERIA === */
+.galeria-mascotas {
+    padding: 1rem;
+}
+
+.mascotas-galeria {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Opcional: ajustes responsivos si quieres afinar el comportamiento */
+@media (max-width: 599px) {
+    .mascotas-galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .mascotas-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .mascotas-galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1440px) {
+    .mascotas-galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+/* === SECCIÓN INFORMATIVA === */
+section#info-title {
+    margin-top: 3rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-left: 5px solid var(--color-secundario);
+    border-radius: var(--borde-suave);
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #666;
+}

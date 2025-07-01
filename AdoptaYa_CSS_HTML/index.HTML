@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdoptaYa - Encuentra tu Compañero</title>
+    <link rel="stylesheet" href="./_CSS/styles.css" />
+
+</head>
+
+<body>
+    <header>
+        <h1>🐾 AdoptaYa</h1>
+        <p>Conoce a nuestros peludos que buscan una familia</p>
+    </header>
+
+    <main>
+        <section class="filtros">
+            <button class="filtro-btn" data-filtro="todos">🔄 Todos</button>
+            <button class="filtro-btn" data-filtro="disponible">✅ Disponibles</button>
+            <button class="filtro-btn" data-filtro="en-proceso">🕐 En proceso</button>
+            <button class="filtro-btn" data-filtro="adoptado">❌ Adoptados</button>
+        </section>
+
+        <section aria-labelledby="gallery-title" class="galeria-mascotas">
+            <h2 id="gallery-title">Galería de Adopción</h2>
+
+            <div class="mascotas-galeria">
+                <!-- Aquí irán las fichas de mascotas -->
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota disponible">
+                        <span class="estado-mascota">Disponible</span>
+                        <picture>
+                            <!-- WebP para móviles -->
+                            <source media="(max-width: 767px)" srcset="./_IMG/luna-400x400.webp" type="image/webp" />
+
+                            <!-- WebP para pantallas mayores -->
+                            <source media="(min-width: 768px)" srcset="./_IMG/luna-600x400.webp" type="image/webp" />
+
+                            <!-- JPG de respaldo para navegadores antiguos -->
+                            <img src="./_IMG/luna-600x400.jpg" alt="Luna, gata blanca con ojos azules" loading="lazy" />
+                        </picture>
+                        <figcaption>Luna</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Luna</h3>
+                        <p>Gatita rescatada, cariñosa y tranquila. Le encanta dormir al sol. 5 meses de edad.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota adoptado">
+                        <span class="estado-mascota">Adoptado</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/max-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/max-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/max-600x400.jpg" alt="Max, perro mediano color dorado con mirada juguetona"
+                                loading="lazy" />
+                        </picture>
+                        <figcaption>Max</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Max</h3>
+                        <p>Juguetón, leal y lleno de energía. Ideal para familias activas. 1 año.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota en-proceso">
+                        <span class="estado-mascota">En Proceso</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/milo-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/milo-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/milo-600x400.jpg" alt="Milo, perro cafe al aire libre" loading="lazy" />
+                        </picture>
+                        <figcaption>Milo</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Milo</h3>
+                        <p>Curioso y explorador, ideal para compañía en casa. 1 mes y vacunado.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota adoptado">
+                        <span class="estado-mascota">Adoptado</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/nina-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/nina-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/nina-600x400.jpg" alt="Nina, gata pequeña peluda con ojos verdes"
+                                loading="lazy" />
+                        </picture>
+                        <figcaption>Nina</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Nina</h3>
+                        <p>Amable, obediente y ama a los niños. Busca un hogar lleno de amor. 5 meses.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota adoptado">
+                        <span class="estado-mascota">Adoptado</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/tom-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/tom-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/tom-600x400.jpg" alt="Tom, gato gris de pelo corto con mirada tranquila"
+                                loading="lazy" />
+                        </picture>
+                        <figcaption>Tom</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Tom</h3>
+                        <p>Amable, obediente. Busca un hogar lleno de amor. 5 meses.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota disponible">
+                        <span class="estado-mascota">Disponible</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/rocky-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/rocky-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/rocky-600x400.jpg"
+                                alt="Rocky, perro mediano marrón claro con orejas levantadas" loading="lazy" />
+                        </picture>
+                        <figcaption>Rocky</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Rocky</h3>
+                        <p>Amable y juguetón. Busca un hogar lleno de amor. 3 meses.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota en-proceso">
+                        <span class="estado-mascota">En proceso</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/mia-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/mia-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/mia-600x400.jpg" alt="Mia, gatita tricolor con ojos verdes"
+                                loading="lazy" />
+                        </picture>
+                        <figcaption>Mia</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Mia</h3>
+                        <p>Obediente. Busca un hogar lleno de amor. 1 año.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+
+                <article class="ficha-mascota">
+                    <figure class="imagen-mascota disponible">
+                        <span class="estado-mascota">Disponible</span>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./_IMG/bruno-400x400.webp" type="image/webp" />
+                            <source media="(min-width: 768px)" srcset="./_IMG/bruno-600x400.webp" type="image/webp" />
+                            <img src="./_IMG/bruno-600x400.jpg" alt="Bruno, cachorro labrador juguetón color crema"
+                                loading="lazy" />
+                        </picture>
+                        <figcaption>Bruno</figcaption>
+                    </figure>
+                    <div class="info-mascota">
+                        <h3>Bruno</h3>
+                        <p>Timido. Busca un hogar lleno de amor. 1 meses.</p>
+                        <button type="button">Conocer más</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="info-title">
+            <h2 id="info-title">¿Por qué adoptar?</h2>
+            <p>Al adoptar, salvas una vida y haces espacio para otra. Cada mascota tiene una historia y merece una
+                segunda oportunidad.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AdoptaYa - Amor sin condiciones</p>
+    </footer>
+
+    <script src="./_JS/script.js"></script>
+</body>
+
+</html>
